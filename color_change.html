@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #centeredDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            display: flex;
+            margin-left: 47%;
+            font-size: 24px;
+        }
+       #colorButton{
+display: flex;
+margin-left: 50%;
+padding-top: 5px;
+
+
+
+       } 
+    </style>
+    <title>Change Div Color</title>
+</head>
+<body>
+    <div id="centeredDiv">Click the button to change color</div>
+    <br>
+    <button id="colorButton">Change Color</button>
+
+    <script>
+        const colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "cyan", "gray"];
+        const centeredDiv = document.querySelector("#centeredDiv");
+        const colorButton = document.querySelector("#colorButton");
+
+        function getRandomColor() {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        colorButton.addEventListener("click", () => {
+            const randomColor = getRandomColor();
+            centeredDiv.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
