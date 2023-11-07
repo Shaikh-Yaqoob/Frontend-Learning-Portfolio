@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2a2a2a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .stopwatch-container {
+            background-color: #343a40;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .display {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .controls button {
+            font-size: 1.5em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Creative Stopwatch</title>
+</head>
+<body>
+    <div class="stopwatch-container">
+        <div class="display">00:00.00</div>
+        <div class="controls">
+            <button id="startStop">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let startTime;
+        let intervalId;
+
+        const display = document.querySelector('.display');
+        const startStopButton = document.querySelector('#startStop');
+        const resetButton = document.querySelector('#reset');
+
+        startStopButton.addEventListener('click', function () {
+            if (startStopButton.textContent === 'Start') {
+                startStopButton.textContent = 'Stop';
+                startStopButton.style.backgroundColor = '#d9534f';
+                startTimer();
+            } else {
+                startStopButton.textContent = 'Start';
+                startStopButton.style.backgroundColor = '#007bff';
+                stopTimer();
+            }
+        });
+
+        resetButton.addEventListener('click', function () {
+            resetTimer();
+        });
+
+        function startTimer() {
+            if (!startTime) {
+                startTime = Date.now();
+            }
+            const offset = Date.now() - startTime;
+            intervalId = setInterval(function () {
+                const elapsedTime = new Date(Date.now() - startTime);
+                display.textContent = formatTime(elapsedTime);
+            }, 10);
+        }
+
+        function stopTimer() {
+            clearInterval(intervalId);
+        }
+
+        function resetTimer() {
+            clearInterval(intervalId);
+            display.textContent = '00:00.00';
+            startTime = null;
+            startStopButton.textContent = 'Start';
+            startStopButton.style.backgroundColor = '#007bff';
+        }
+
+        function formatTime(time) {
+            const minutes = time.getMinutes().toString().padStart(2, '0');
+            const seconds = time.getSeconds().toString().padStart(2, '0');
+            const milliseconds = (time.getMilliseconds() / 10).toFixed(0).toString().padStart(2, '0');
+            return `${minutes}:${seconds}.${milliseconds}`;
+        }
+    </script>
+</body>
+</html>
