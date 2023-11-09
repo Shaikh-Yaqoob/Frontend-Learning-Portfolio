@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Stopwatch</title>
+</head>
+<body>
+    <div class="stopwatch">
+        <div class="display">00:00.00</div>
+        <div class="controls">
+            <button id="startStop">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let startTime;
+        let requestId;
+
+        const display = document.querySelector('.display');
+        const startStopButton = document.querySelector('#startStop');
+        const resetButton = document.querySelector('#reset');
+
+        startStopButton.addEventListener('click', function () {
+            if (startStopButton.textContent === 'Start') {
+                startStopButton.textContent = 'Stop';
+                startStopButton.style.backgroundColor = '#d9534f';
+                startTimer();
+            } else {
+                startStopButton.textContent = 'Start';
+                startStopButton.style.backgroundColor = '#4CAF50';
+                stopTimer();
+            }
+        });
+
+        resetButton.addEventListener('click', function () {
+            resetTimer();
+        });
+
+        function startTimer() {
+            startTime = Date.now() - (startTime ? startTime - Date.now() : 0);
+            animateTimer();
+        }
+
+        function animateTimer() {
+            const currentTime = Date.now() - startTime;
+            display.textContent = formatTime(currentTime);
+            requestId = requestAnimationFrame(animateTimer);
+        }
+
+        function stopTimer() {
+            cancelAnimationFrame(requestId);
+        }
+
+        function resetTimer() {
+            cancelAnimationFrame(requestId);
+            display.textContent = '00:00.00';
+            startTime = null;
+            startStopButton.textContent = 'Start';
+            startStopButton.style.backgroundColor = '#4CAF50';
+        }
+
+        function formatTime(time) {
+            const minutes = String(Math.floor(time / 60000)).padStart(2, '0');
+            const seconds = String(Math.floor((time % 60000) / 1000)).padStart(2, '0');
+            const milliseconds = String(Math.floor((time % 1000) / 10)).padStart(2, '0');
+            return `${minutes}:${seconds}.${milliseconds}`;
+        }
+    </script>
+</body>
+</html>
