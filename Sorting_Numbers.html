@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bubble Sort Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+
+        #unsorted {
+            background-color: yellow;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        #sorted {
+            background-color: green;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="unsorted">
+            <h2>Unsorted Array:</h2>
+            <ul id="unsortedList">
+                <li>5</li>
+                <li>3</li>
+                <li>8</li>
+                <li>1</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div id="sorted">
+            <h2>Sorted Array:</h2>
+            <ul id="sortedList"></ul>
+        </div>
+        <button onclick="sortArray()">Sort</button>
+    </div>
+
+    <script>
+        function sortArray() {
+            const unsortedList = document.getElementById("unsortedList");
+            const sortedList = document.getElementById("sortedList");
+            const items = Array.from(unsortedList.children);
+
+            const n = items.length;
+            let swapped;
+
+            do {
+                swapped = false;
+                for (let i = 0; i < n - 1; i++) {
+                    const current = parseInt(items[i].textContent, 10);
+                    const next = parseInt(items[i + 1].textContent, 10);
+
+                    if (current > next) {
+                        const temp = items[i];
+                        items[i] = items[i + 1];
+                        items[i + 1] = temp;
+
+                        swapped = true;
+                    }
+                }
+            } while (swapped);
+
+            sortedList.innerHTML = "";
+            for (let i = 0; i < n; i++) {
+                sortedList.appendChild(items[i].cloneNode(true));
+            }
+        }
+    </script>
+</body>
+</html>
