@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-top: 5%;
+            width: 35%;
+            height: 400px;
+            background-color: darkmagenta;
+            border-radius: 5%;
+            border: 1px solid chocolate;
+        }
+        h1{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #e98a1d;
+            font-family: 'permanent maker', cursive;
+        }
+
+        button{
+            margin-top: 20%;
+            margin-left: 38%;
+            height: 8%;
+            background-color: wheat;
+            color: black;
+            border-radius: 5%;
+            border: none;
+
+
+        }
+        p{
+              text-align: center;
+              font-size: 26px;
+              color: white;
+              
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1> player Fight</h1>
+
+     <p id="players"> Your players are </p>
+
+     <button  id="btn" onclick="play()" >Choose players </button>
+
+    </div>
+<script>
+    
+    let players = ["Zain","Atif","King","Ali","Basit","Dilber","Yaqub","Mehdi","Mustafa","Rizwan","Jabbar"];
+
+    let btn = document.getElementById("btn")
+    let result = document.getElementById("players")
+
+
+   function play(){
+
+          let RandomNumber1 = Math.floor(Math.random() * players.length )
+          let RandomNumber2 = Math.floor(Math.random() * players.length )
+        
+          result.textContent = players[RandomNumber1]+ "  VS " + players[RandomNumber2];            
+
+   }
+
+</script>
+
+
+</body>
+</html>
