@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width=, initial-scale=1.0">
+    <title> Add To Cart</title>
+
+    <!-- cdn links of favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+     <img src="cat.png" alt="" id="logo">
+     <input type="text" placeholder="Add" id="input-field" class="button">
+     <button id="btn-add" class="button">Add To Cart</button>
+     <br>
+    <ul id="list" >
+
+    </ul>
+        
+        
+    
+
+    </div>
+
+     <script type="module" >
+
+    
+        //get elements here---------------------------
+        let addCartButton = document.getElementById("btn-add")
+        let inputField = document.getElementById("input-field")
+        let list = document.getElementById("list")
+
+          //event on add cart function 
+       addCartButton.addEventListener("click", function(){
+          let inputValue = inputField.value
+          clear()
+
+           if(inputValue === "")
+           {
+              confirm("please! Write something....")
+           }
+           else{
+             list.innerHTML += ` <li> ${inputValue} </li>`
+           }         
+    });
+
+    function clear(){
+        inputField.value = ""
+    }
+
+
+
+
+
+
+
+
+   
+
+
+
+       </script>
+  
+  </body>
+  </html>
