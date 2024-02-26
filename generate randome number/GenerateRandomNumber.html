@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 30%;
+            height: 400px;
+            margin: 10%;
+            background-color: darkorange;
+            margin-left: 30%;
+            border-radius: 5%;
+        }
+
+        button{
+                 margin-left: 32%;
+                 margin-top: 5%;
+                 margin-bottom: 1%;
+                border-radius: 4%;
+                background-color: forestgreen;
+                font-weight: bold;
+                color: white;
+                width: 40%;
+                border: none;
+                height: 10%;
+                text-align: center;
+
+
+
+        }
+        p{
+            text-align: center;
+            font-size: xx-large;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+   <div class="box">
+
+    <button id="btn" onclick="GenerateRandomNumber()" >Generate Random Number</button>
+    <br><br>
+
+    <button id="clear" onclick="Clear()" >Clear</button>
+     <p id="result"  >your Number is: </p>
+     
+   </div>
+
+
+   <script>
+  
+
+        let result = document.getElementById("result")
+
+       // result = 0;
+
+   function  GenerateRandomNumber(){
+    
+     var RandomNumber = Math.floor(Math.random() * 100) + 1;
+   
+      result.textContent = "Your Number is: " + RandomNumber;
+
+   }
+
+
+   
+
+   function Clear() {
+
+     result.textContent = "Your Number is: "
+
+   }
+
+   </script>
+
+</body>
+</html>
+
