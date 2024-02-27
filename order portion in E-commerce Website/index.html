@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main{
+        margin-left: 30%;
+        margin-top: 5%;
+    }
+
+        button{
+            margin: 0 auto;
+            padding: 12px;
+            width: 8%;
+            font-size: xx-large;
+            font-weight: bolder;
+
+        }
+        #increment{
+            background-color: royalblue;
+            color: white;
+        }
+        #increment{
+            background-color: darkred;
+            color: white;
+        }
+
+        #addToCart{
+            width: 25%;
+            background-color: lightgreen;
+            color: white;
+            border: 1px solid green;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+   
+ 
+    <div class="main">       
+    <button class="btn" id="decrement" disabled>-</button>
+    <span class="btn zero" id="digit" style="margin: 0 3.5%; font-size: large;">0</span>
+    <button class="btn" id="increment">+</button>
+    <br> <br>
+    <button id="addToCart" disabled>Add Cart</button>
+  </div>
+
+    <script>
+        let increment = document.getElementById("increment")
+        let decrement = document.getElementById("decrement")
+        let digit = document.getElementById("digit")
+        let CartButton = document.getElementById("addToCart")
+
+        let num = 0;
+        
+        increment.addEventListener("click", function(){
+            num++
+            decrement.disabled = false
+            CartButton.disabled = false
+            digit.innerHTML = num
+        })
+
+     
+         decrement.addEventListener("click", function(){
+             num--
+             if(num === 0){
+             decrement.disabled = true
+             CartButton.disabled = true
+             }
+             digit.innerHTML = num
+        
+        
+            
+         })
+
+         CartButton.addEventListener("click", function(){
+            alert("Your " + num + " pairs are processing to be order")
+         })
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </script>
+</body>
+</html>
