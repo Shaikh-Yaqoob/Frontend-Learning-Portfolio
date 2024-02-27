@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img
+        {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="pic" style="width: 300px;">
+        <h1 id="text">
+
+        </h1>
+
+    </div>
+
+
+
+    <button onclick="play()">show me yahya</button>
+   
+   
+   
+    <button onclick="run()">text</button>
+
+    <script>
+
+        function play(){
+
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        
+            document.getElementById("pic").innerHTML = `
+            <img src="${data.message}" >
+            `
+
+        })
+    }
+
+    function run(){
+    fetch("https://apis.scrimba.com/bored/api/activity")
+     .then(response => response.json())
+     .then(data => {
+         console.log(data)
+     
+        document.getElementById("text").textContent = data.activity
+     })
+ }
+
+
+    </script>
+</body>
+</html>
