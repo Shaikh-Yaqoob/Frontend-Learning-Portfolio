@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        body{
+            background-color: rgb(21, 13, 13);
+        }
+
+        .box{
+      
+           width: 32%;
+           height: 380px;
+           margin: 5%;
+           margin-left: 30%;
+           background-color: rgb(47, 44, 44);
+            overflow-x: hidden;
+            border-radius: 3%;
+        
+         }
+
+         #display{
+            padding-top: 7px;
+            width: 85%;
+            height: 70px;
+            background-color:rgb(47, 44, 44) ;
+            text-align: right;
+            color: white;
+            border: none;
+            outline: none;
+            margin-bottom: 10%;
+            font-size: large;
+            
+            
+            
+           }
+
+
+           button{
+            margin-bottom: 1.5%;
+            text-align: center;
+            width: 22%;
+            height: 39px;
+            background-color: black;
+            color: white;
+            font-size: large;
+            border-radius: 5%;
+
+          }
+
+          .numbers{
+            margin-left: 3%;
+          }
+         #equal{
+         width: 45%;
+         color: goldenrod;
+         
+          }
+
+          #operators{
+            color: goldenrod;
+            font-weight: bold;
+            
+         }
+
+      </style>
+     
+</head>
+<body>
+    
+  <div class="box">
+
+    <input type="text" id="display" readonly>
+    <br>
+    <div class="numbers">
+    <button type="button" id="operators" onclick="display.value= '' ">C</button>
+    <button type="button" id="operators"onclick="display.value = display.value.toString().slice(0,-1)" >DE</button>
+    <button type="button" value="." onclick="display.value += '.' " id="operators" >.</button>
+    <button type="button" value="/"  class="div" onclick="display.value += '/' " id="operators" >/</button>
+    <br>
+    <button type="button" value="7" onclick="display.value += '7' ">7</button>
+    <button type="button" value="8" onclick="display.value += '8' " >8</button>
+    <button type="button" value="9"   onclick="display.value += '9' " >9</button>
+    <button type="button" value="*" id="operators" onclick="display.value += '*' ">x</button>
+    <br> 
+    <button type="button" value="4"  onclick="display.value += '4' ">4</button>
+    <button type="button" value="5" onclick="display.value += '5' " >5</button>
+    <button type="button" value="6" onclick="display.value += '6' ">6</button>
+    <button type="button" value="-"  id="operators" onclick="display.value += '-' " >-</button>
+    <br> 
+    <button type="button" value="1"  onclick="display.value += '1' ">1</button>
+    <button type="button" value="3" onclick="display.value += '2' " >2</button>
+    <button type="button" value="3" onclick="display.value += '3' " >3</button>
+    <button type="button" value="+" id="operators" onclick="display.value += '+' " >+</button>
+    <br> 
+    <button type="button" value="0" onclick="display.value += '0' ">0</button>
+    <button type="button" value="00" onclick="display.value += '00' " >00</button>
+    <button type="button" value="=" id="equal" onclick="display.value = eval(display.value)">=</button>
+    </div>
+    <br> 
+
+  </div>
+
+
+
+
+</body>
+</html>

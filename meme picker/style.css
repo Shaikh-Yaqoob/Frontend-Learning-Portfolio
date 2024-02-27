@@ -1,0 +1,119 @@
+*{
+    font-family: 'robotic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+
+.parent-box{
+   
+    margin-left: 8%;
+    width: 360px;
+    background-color: #67595e;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 0;
+    border: 1px solid black;
+
+}
+
+img{
+    width: 75px;
+}
+h1,h2{
+    text-align: center;
+
+}
+h1,h2{
+    color: #EEd6D3;
+}
+.header-text{
+    float: right;
+    padding-left: 20px ;
+    margin: 15px;
+}
+h3{
+    margin-top: 1%;
+    margin-left: 9%;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 1%;
+    color: #4e302c;
+    
+}
+#emotion-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    width: 360px;
+   
+    border-bottom: none;
+    box-shadow: 2px 2px 7px 2px rgb(173, 165, 165);
+
+}
+
+#emotion-list{
+    display: flex;
+    flex-direction: column;
+    font-family: 'robotic', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+
+    
+}
+.emoionNames{
+    border-bottom: 1px solid #4e302c;
+    font-family: 'robotic', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    column-gap: 10px;
+    padding-left: 6px;
+      padding-bottom: 5px;
+       padding-top:  5px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid black;
+   
+}
+
+.emoionNames:hover{
+    color: rgb(5, 146, 0);
+    text-decoration: underline;
+}
+
+#meme{
+     width: 220px;
+     background-color: #dcd0ce;
+     border-radius: 5px;
+     float: right;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
+     margin: auto;
+
+
+
+
+
+    
+
+}
+#meme-img{
+    width: 210px;
+    border-radius: 6px;
+    padding: 5px;
+    
+}
+span{
+    padding-bottom: 4px;
+    padding-right: 5px;
+    float: right;
+    cursor: pointer;
+} 
+
+span:hover{
+    color: red;
+
+}
