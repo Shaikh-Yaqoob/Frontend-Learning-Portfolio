@@ -1,0 +1,143 @@
+
+
+.logo{
+  margin: 1.5% 0 0 3.5%;
+  font-weight: bold;
+  font-size: 24px
+}
+
+
+
+.home-txt{
+       margin: 10% 0 0 12%;
+       color: black;
+    
+   
+}
+
+.head{
+  font-size: 5.5rem;
+  font-weight: bolder;
+}
+
+.txt{
+  font-size: 1.5rem;
+  
+}
+
+.home-btn {
+  background-color: black;
+  width: 6.5em;
+  height: 2em;
+  margin: 0.5em;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+ }
+ 
+ .home-btn:hover {
+  color: black;
+ }
+ 
+ .home-btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -100%;
+   right: -20%; 
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all .5s;
+ }
+ 
+ .home-btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all .5s;
+ }
+
+.portion-1{
+ width: 100%;
+  background-repeat: no-repeat;
+   background-size: cover;
+  background-image: url(girl.jpg);
+  height: 600px;
+  
+
+}
+
+
+.portion-2{
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(man1.jpg); */
+  background-image: url(man1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+ }
+
+
+/* media query for i pade -----------------------------------------------------------------------------------*/
+
+@media (max-width: 780px) {
+
+  .logo{
+  margin: 5% 0 0 5%;
+  font-weight: bold;
+  font-size: 18px
+}
+
+.home-txt{
+  margin: 26% 0 0 10%;
+  color: black;
+
+
+}
+
+.head{
+font-size: 4rem;
+font-weight: bolder;
+}
+
+.txt{
+font-size: 1rem;
+
+}
+
+}
+
+/* media query for mobile */
+@media (max-width: 480px) {
+
+  .logo{
+  margin: 8% 0 0 7%;
+  font-weight: bold;
+  font-size: 18px;
+ }
+
+ .home-txt{
+  margin: 40% 0% 0% 12%;
+  color: black;
+ }
+
+ .head{
+ font-size: 3rem;
+ font-weight: bolder;
+ 
+}
+
+ .txt{
+ font-size: 1rem;
+ 
+}
+
+}
+
+/* products section==================================== */

@@ -1,0 +1,88 @@
+body{
+    background-image: url(cup1.jpg);
+    background-repeat: no-repeat;
+
+}
+
+.homePage{
+    margin-top: 7%;
+    margin-left: 50%;   
+}
+
+.feel{
+    font-size: 4rem;
+}
+.disc{
+    font-size: larger;
+    text-transform: capitalize;
+    
+}
+
+@media (max-width: 780px) {
+
+  .homePage{
+    margin-top: 6%;
+    margin-left: 40%;   
+}
+
+.feel{
+    font-size: 2rem;
+}
+.disc{
+    font-size: large;
+    text-transform: capitalize;
+    
+}  
+.card-container{
+        margin-bottom: 6%;
+ }
+ .card{
+    display: inline-block;
+    box-shadow: 0 1px 10px 0 rgb(0.05, 0.5, 1);
+   margin-left: 7%;
+}
+.st-head{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-img{
+    width: 200px;
+       margin-bottom: 5%;
+       clip-path: circle(50% at 50% 50%);
+}
+
+}
+
+
+.title{
+    margin-top: 12%;
+    text-align: center;
+    margin-bottom: 6%;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.card-container{
+    display: flex;
+    margin-bottom: 6%;
+
+}
+
+.card{
+    box-shadow: 0 1px 10px 0 rgb(0.05, 0.5, 1);
+   margin-left: 7%;
+}
+st-head{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-img{
+    width: 200px;
+       margin-bottom: 5%;
+       clip-path: circle(50% at 50% 50%);
+}
