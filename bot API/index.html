@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+
+   }
+
+         h1{
+                 text-align: center;
+                 font-size: 42px;
+         }
+         h3{
+            margin-top: 1%;
+            font-size: x-large;
+            text-align: center;
+            color: black;
+
+        
+         }
+         
+         
+         
+         button{
+             margin-top: 5%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 45.5%;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background: #b83d3d;
+            box-shadow:  18px -18px 37px #742626,
+             -18px 18px 37px #fc5454;
+
+
+
+         }
+         button:hover{
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+             box-shadow:  18px 18px 37px #742626,
+              -18px -22px 30px #fc5454;
+         }
+
+    </style>
+</head>
+<body>
+    <h1 id="head">🤖BoringROBOT🤖</h1>
+    <h3 id="text">Want to do something 😐</h3>
+        <button id="btn"></button>
+    
+    <script>
+        
+         
+
+    document.getElementById("btn").addEventListener("click", function(){
+
+                      fetch("https://apis.scrimba.com/bored/api/activity")
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data)
+                        
+                           document.getElementById("text").textContent = data.activity
+                           document.getElementById("head").textContent = "HappyBOT😁"
+                        })  
+              })
+   
+   
+   
+   
+   
+   
+   
+
+
+
+
+
+
+    </script>
+</body>
+</html>
