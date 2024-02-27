@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            margin-top: 5%;
+            margin-left: 15%;
+            height: 300px;
+            width: 30%;
+            background-color: linen;
+
+                }
+
+
+button{
+     display: inline-block;
+    width: 50%;
+    height: 20px;
+    outline: none;
+    border: none;
+    border: radius;
+    background-color: darkred;
+    color: white;
+    margin-bottom: 2%;
+    font-weight: bold;
+    margin-left: 20%;
+}
+h1{
+    text-align: center;
+}
+
+#dig{
+    text-align: center;
+    color: darkred;
+    font-weight: bold;
+    font-size: x-large;
+}
+    </style>
+</head>
+<body>
+
+
+    <div class="box">
+      <h1>Counter APP</h1>
+      <p id="dig">0</p>
+
+      <br> <br><br>
+      <button id="incre " onclick="increment()">  increment</button>
+     <br>
+     <button id="reset">Reset</button>
+    <br>
+     <button id="decre" onclick="Decrement()"> Decrement</button>
+       
+    
+
+
+    </div>
+    
+    <script>
+        
+   
+
+        var num = 0;
+
+        function increment(){
+        
+             num++
+             document.getElementById("dig").innerHTML=num;
+        
+            }
+
+
+
+      let reset = document.getElementById("reset")   
+
+       reset.addEventListener("click", function(){
+         num = 0;
+         document.getElementById("dig").innerHTML=num;
+ 
+       })    
+
+         
+         function Decrement(){
+          
+     num--
+     document.getElementById("dig").innerHTML=num; 
+    
+             }
+
+
+
+    </script>
+</body>
+</html>
