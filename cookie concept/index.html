@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie concept</title>
+   
+    <link rel="stylesheet" href="style.css">
+
+</head> 
+<body>
+
+   <main>
+    <div id="popup">
+            <div id="upper-text">
+                 <span id="cut">X</span>
+                 <h1 id="title">WE Love your Data</h1>
+                 <p id="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                     Molestiae eligendi voluptatum, magnam, quaerat nisi adipisci illum ipsa, exercitationem similique quidem 
+                     asperiores! Recusandae, error fugiat corporis qui est vero tempora</p>
+                   </div>
+
+                   <form id="forms">
+                    <p>Name</p>
+                    <input type="text" name="" id="">
+                    <p>Email</p>
+                    <input type="email" name="" id="">
+                    <div id="buttons">
+                        <br>
+                        <button type="submit" id="submit">Accept</button>
+                        <button type="button">Decline</button>
+                     </div>
+                   </form>
+                </div>
+                </main>
+   
+
+
+
+    <script>
+        const cut = document.getElementById("cut")
+        const  text = document.getElementById("upper-text")
+        const popup = document.getElementById("popup")
+        const submit = document.getElementById("forms")
+
+
+        //displaying th popup
+        setTimeout(function(){
+            popup.style.display = "inline"                     
+
+            })
+
+         cut.addEventListener("click", function(){
+           popup.style.display = "none"
+         })
+
+           submit.addEventListener("click", function(e){
+                    e.preventDefault
+                    text.innerHTML = " Your data is being processed, Don't Skip! "
+
+          })            
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
