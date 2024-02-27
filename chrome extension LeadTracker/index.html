@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        
+        #input-el{
+           
+            margin-left: 2%;
+            margin-right: 5%;
+            margin-top: 1%;
+            border-radius: 3%;
+            height: 25px;
+            padding-left: 5px;
+            border: 1px solid green;
+            outline: none;
+            width: 33%;
+        }
+
+        button{
+            margin-top: 3px;
+            background-color: green;
+            color: white;
+            border: none;
+            height: 7%;
+            border-radius: 3%;
+            height: 27px;
+            width: 120px;
+        }
+        #save-btn{
+            margin-left: 2%;
+        }
+        #dlt-btn{
+            background-color: white;
+            color: green;
+            border: 1px solid green;
+        }
+
+        ul{
+            margin-top: 25px;
+            list-style: none;
+            padding-left: 25px;
+
+        }
+        li,a{
+            color: green;
+            text-decoration: none;
+            margin-top: 7px;
+            
+         }
+         
+     </style>
+</head>
+<body>
+    
+    <div class="box">
+<input type="text" name="" id="input-el">
+<br>
+<button id="save-btn">Save Input</button>
+<button id="dlt-btn">Delete All</button>
+
+  <ul id="ul-el">
+
+  </ul>
+</div>
+
+<script>
+   var array = [] 
+var input = document.getElementById("input-el")
+var btn = document.getElementById("save-btn")
+var ul = document.getElementById("ul-el")
+let deleteButton =  document.getElementById(dlt-btn)
+
+
+btn.addEventListener("click", function(){
+        array.push(input.value)
+        input.value = ""
+        displayLinks()
+        
+})
+
+deleteButton.addEventListener("click", function(){
+    
+function displayLink(){
+
+var listItems = ""
+
+for (let i=0; i<array.length; i++){
+
+listItems = " "
+
+}
+ul.innerHTML = listItems
+}
+})
+
+
+
+function displayLinks(){
+
+    var listItems = ""
+
+for (let i=0; i<array.length; i++){
+ 
+   listItems +=
+   `<li>
+        <a href='${array[i]}' target='_blank'> ${array[i]} </a>
+    </li>`
+ 
+}
+
+ul.innerHTML = listItems
+}
+
+</script>
+
+</body>
+</html>

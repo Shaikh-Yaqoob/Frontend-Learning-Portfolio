@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    
+
+        #input-el{
+           width: 25%;
+            margin-left: 2%;
+            margin-top: 1%;
+            border-radius: 3%;
+            height: 25px;
+            padding-left: 5px;
+            border: 0.5px solid green;
+            outline: none;
+        }
+
+        button{
+            margin-top: 3px;
+            background-color: green;
+            color: white;
+            border: none;
+            height: 7%;
+            margin-left: 2%;
+            border-radius: 3%;
+            height: 27px;
+            width: 120px;
+        }
+
+        ul{
+            margin-top: 25px;
+            list-style: none;
+            padding-left: 25px;
+
+        }
+        li,a{
+            color: green;
+            text-decoration: none;
+            margin-top: 7px;
+            
+         }
+     </style>
+</head>
+<body>
+    
+    <div class="box">
+<input type="text" name="" id="input-el">
+<br>
+<button id="save-btn">Save Input</button>
+<br>
+
+  <ul id="ul-el">
+
+  </ul>
+</div>
+
+<script>
+   var array = [] 
+var input = document.getElementById("input-el")
+var btn = document.getElementById("save-btn")
+var ul = document.getElementById("ul-el")
+
+btn.addEventListener("click", function(){
+        array.push(input.value)
+        input.value = ""
+        displayLinks()
+})
+
+
+function displayLinks(){
+
+    var listItems = ""
+
+for (let i=0; i<array.length; i++){
+ 
+   listItems +=
+   `<li>
+        <a href='${array[i]}' target='_'> ${array[i]} </a>
+    </li>`
+ 
+}
+
+ul.innerHTML = listItems
+}
+
+</script>
+
+</body>
+</html>
