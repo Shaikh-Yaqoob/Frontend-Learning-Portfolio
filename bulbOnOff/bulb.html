@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="area">
+      <img src="of-bulb.jpg" alt="" id="bulb">
+    </div>
+
+    <button id="off">on</button>
+
+
+     <script>
+
+      
+        let btn = document.getElementById("off")
+        let bulb = document.getElementById("bulb")
+
+        btn.addEventListener("click", function(){
+            
+       if(btn.textContent === "on"){
+
+        bulb.src = "on.jpg"
+        btn.textContent = "off"
+       }
+       
+       else if(btn.textContent === "off"){
+        bulb.src = "of-bulb.jpg"
+         btn.innerHTML = "on"
+       }
+        
+        })
+
+     </script>
+
+</body>
+</html>
