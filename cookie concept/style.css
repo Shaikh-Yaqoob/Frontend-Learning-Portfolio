@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'robotic', sans-serif;
+}
+
+#popup{
+    width: 30%;
+    background-color: lightcoral;
+    padding: 3px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+
+
+}
+
+
+#cut{
+    float: right;
+    color: white;
+    padding: 0px;
+
+}
+
+#cut:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#title{
+    margin-top: 1%;
+    color: white;
+ 
+
+}
+
+input{
+    width: 80%;
+    padding: 5px;
+    outline: none;
+}
+
+#discription{
+    margin-top: 2%;
+  color: black;
+    margin-bottom: 2%;
+}
+
+button{
+    padding: 10px;
+    outline: none;
+    text-align: center;
+    
+}
+#btn{
+    margin-left: 20%;
+}
+
