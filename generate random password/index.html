@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'robotic', sans-serif;
+
+
+          }
+          body,html{
+            background-color: #606c38;
+
+          }
+
+          .container{
+            margin-top: 15%;
+            margin-left: 5%
+
+          }
+          h2{
+            color: white;
+        
+          }
+          span{
+            color: peru;
+            border-bottom: 1px solid salmon ;
+        
+          }
+
+          img{
+             width: 25px;
+             margin-top: 3px;cursor: pointer;
+             
+                      
+          }
+
+
+
+         input{
+            border: none;
+            outline: none;
+            width: 85%;
+            font-size: medium;
+
+
+          } 
+        
+
+        
+          .input{
+            margin-top: 2%;
+            background-color: white;
+            width: 25%;
+            height: 35px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+          
+            padding-left: 10px;
+          
+          
+          }
+
+          button{
+            margin-top: 1%;
+            background-color: lightsalmon;
+            color: white;
+            padding: 5px 10px;
+            width: 100px;
+            height: 30px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            font-size: medium;
+            cursor: pointer;
+
+          }
+
+          button:hover{
+            background-color: salmon;
+          }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Generate a <br><span>Random password</span></h2>
+       
+        <div class="input">
+             <input type="text" id="inputValue" onclick="">
+            <img src="copy logo.jpg" alt="" id="copy" onclick="copy()">
+    
+        </div>
+        <button onclick="generateRandomPassword()">Generate</button>
+    </div>
+    
+    <script>
+
+        const inputBox = document.getElementById("inputValue")
+    
+          let size = 8
+
+           var uppeCase = "ABCDEFGHJKLMNOPQRSUVWXYZ"
+           var lowerCase = "abcdefghjklmnopqrsuvwxyz"
+           var nummbers = "0123456789"
+           var symbols = "@#"
+            var allChars = uppeCase + lowerCase + nummbers + symbols  
+
+             function generateRandomPassword(){
+                    
+                 let password = ""
+                 
+                 password += uppeCase[Math.floor(Math.random() * uppeCase.length)]
+                 password += lowerCase[Math.floor(Math.random() * lowerCase.length)]                 
+                 password += nummbers[Math.floor(Math.random() * nummbers.length)]
+                 password += symbols[Math.floor(Math.random() * symbols.length)]
+                
+                while( size > password.length ){
+
+                  password += allChars[Math.floor(Math.random() * allChars.length )]
+                  
+                }
+
+                inputBox.value = password
+                 }
+            
+    
+
+
+             function copy(){
+                inputBox.select()
+                document.execCommand("copy")
+             }
+             
+             
+            
+
+    </script>
+</body>
+</html>
