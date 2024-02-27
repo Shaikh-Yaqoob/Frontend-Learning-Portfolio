@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main id="container">  
+     
+   
+     <div class="hero-section " id="wizard"> 
+    
+
+     </div>
+
+  
+      <div class="hero-section hero-section2" id="monster">
+    
+  
+  
+  
+  
+  
+    </div>                           
+      </main>
+       
+      
+      
+        <br><br>
+        <div class="attack-btn">
+            <button class="Attack" onclick="displayDice(diceCount)">Attack</button>
+        </div>
+
+        <script>
+
+
+                 let wizard1 = {
+                    elementID: "wizard",
+                    name: "Hero",
+                    avatar: "wizard.png",
+                    health: 60,
+                    diceRoll: [2,6,3],
+                    diceCount: 2
+                   }
+
+                   let monster1 = {
+                    elementID: "monster",
+                    name: "Villain",
+                    avatar: "orc.png",
+                    health: 81,
+                    diceRoll: [5,,1],
+                    diceCount: 3
+                }
+                
+
+
+
+                   function displayPlayers(data){
+
+                  var {elementID, name, avatar, health, diceRoll, diceCount} = data
+                  let showDiceHere = displayDice(diceCount)
+                                      
+                         document.getElementById(elementID).innerHTML = `
+                                <h2>${name}</h2>
+                                   <img src="${avatar}" alt="" id="avatar">
+                                   <p id="health">health: <b style="font-weight: 600;">${health}</b></p>
+                            <div id="dice-container"> 
+                              ${showDiceHere}
+                          </div>
+                   `
+                   }
+
+                   displayPlayers(wizard1)
+                   displayPlayers(monster1) 
+
+
+                  function getDiceRollArray(diceCount){
+                   let newDicesHere = []
+
+                    for(let i=0; i<diceCount; i++){
+                      newDicesHere.push(Math.floor(Math.random() * 6 ) + 1)
+                    }
+                     return newDicesHere
+                     
+                  }
+                 
+                   function displayDice(diceCount){
+
+                     return getDiceRollArray(diceCount).map(function(num){
+                             return `<button class="dice"> ${num} </button>`
+                     }).join(' ')
+           
+                   }
+
+                    
+                
+
+
+        </script>
+
+</body>
+</html>

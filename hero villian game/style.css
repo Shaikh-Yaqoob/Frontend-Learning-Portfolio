@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(61, 50, 50);
+}
+#container{
+    display: flex;
+    
+    
+}
+.hero-section{
+    width: 210px;
+    background-color: rgba(42, 34, 34, 0.895);
+    margin-bottom: 0%;
+    margin-left: 25%;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 1px 2px 2px 5px gainsboro;
+}
+.hero-section2{
+    margin-left: 4%;
+}
+
+img{
+    width: 165px;
+    padding-left: 13px;
+
+}
+h2{
+   text-align: center;
+   color: white;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p{
+    color: white;
+    line-height: 0%;
+    padding-left: 4px;
+    font-size: large;
+}
+#dice-container{
+    height: 40px;
+    background-color: black;
+    padding-top: 8px;
+    border-radius: 5%;
+    display: flex;
+ 
+}
+
+button{
+      width: 9vh;
+      margin: 0px auto;  
+      border-radius: 15%;
+      padding: 4px;
+      align-self: center;
+      color: black;
+      background-color: white;
+      font-size: larger;
+     
+     
+     
+
+    }
+
+.Attack{
+    margin-left: 38%;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+    width: 9%;
+    height: 5%;
+    padding: 10px;
+    font-size: large;
+    background-color: rgb(228, 228, 38);
+    color: rgb(174, 85, 52);
+    cursor: pointer;
+}
+.Attack:hover{
+         background-color: green;
+         color: white;
+}
+
+
+
+
+
+
+
