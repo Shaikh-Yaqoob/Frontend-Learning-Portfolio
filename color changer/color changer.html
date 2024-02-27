@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="previous">previous</button>
+    <div id="color-box" style="width: 500px; height: 100px;"> </div>
+    <button id="next">next</button>
+
+    <script>
+           let pre =document.getElementById("previous")
+           let nex = document.getElementById("next")
+           let colors = document.getElementById("color-box")
+        
+           let currentIndex = 0
+           let color = ["blue","red","cyan","black","white","orange","pink"]
+
+           function changeColor(){
+
+            colors.style.backgroundColor = color[currentIndex]
+
+           }
+
+           next.addEventListener("click", function(){
+             
+               currentIndex = (currentIndex + 1) % color.length
+               changeColor()
+
+           })
+
+           pre.addEventListener("click", function(){
+             
+               currentIndex = (currentIndex - 1) % color.length
+               changeColor()
+
+           })
+           
+           changeColor()
+
+
+
+    </script>
+</body>
+</html>
