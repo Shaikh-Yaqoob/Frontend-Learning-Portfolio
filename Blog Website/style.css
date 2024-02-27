@@ -1,0 +1,100 @@
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'karla', sans-serif;
+
+
+}
+nav{
+    height: 50px;
+    padding-left: 55px;
+    line-height: 50px; 
+    background-color: #453076;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+
+#form-container{
+
+    background-color: #e2d4ff;
+    padding: 15px 55px;
+    color: white;
+
+
+}
+
+#input-text, button{
+    height: 7vh;
+    border-radius: 1%;
+    outline: none;
+    border: none;
+    padding: 5px;
+    padding-left: 7px;
+     margin-bottom: 12px;
+     font-size: medium;
+     
+}
+#input-body{
+    height: 18vh;
+    border-radius: 1%;
+    outline: none;
+    border: none;
+    padding-left: 7px;
+    margin-bottom: 13px;
+    font-size: medium;
+    text-align: left;
+    padding: 5px;
+
+}
+label{
+    font-size: larger;
+    color: black;
+    
+}
+
+
+#input-text, button, #input-body{
+    width: 100%;
+    border: 1px solid gray;
+    
+}
+
+
+
+button{
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #138817f3;
+    
+    
+}
+
+#blogArea{
+    padding: 10px 55px;
+    color: black;
+    
+
+}
+@media (max-width: 480px) {
+    #blogArea{
+        padding: 5px 35px;
+        color: black;
+        
+    }
+
+    button{
+        font-size: medium;
+    }
+    label{
+        font-size: medium;
+    }
+    
+}
