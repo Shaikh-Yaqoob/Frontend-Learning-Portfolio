@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            margin-top: 5%;
+            width: 40%;
+            height: 500px;
+            background-color: green;
+            margin: auto;
+            border-radius: 5%;
+            border: 1px solid lightgoldenrodyellow;
+        }
+        
+    h1{
+        text-align: center;
+        color: bisque;
+    }
+    h2,h3{
+        text-align: center;
+        color: white;
+    }
+
+    button{
+        width: 25%;
+        height: 7%;
+        border-radius: 5%;
+        background-color: yellow;
+        margin-left: 40%;
+         border: none;
+         font-weight: bold;
+         margin-bottom: 2%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+     <h1>Card Game</h1>
+    <h2 id="showResults" >Want to Play a round: </h2>
+    <h3 id="card-el">Cards: </h3>
+    <h3 id="sum-el">Sum: </h3>
+
+    <button onclick="play()">Start Game</button>
+    <button onclick="">New Card</button>
+
+
+
+    </div>
+    
+  
+    
+    <!-- JS shuruu======================================================================== -->
+    <script>
+     
+
+     var card1 = 10;
+     var card2 = 9;
+   let sum = card1 + card2;
+    let message = " ";
+      
+    let result = document.getElementById("showResults");
+    document.write(result)
+   
+
+    var sumEL = document.getElementById("sum-el");
+    var cardEl = document.getElementById("card-el");
+
+
+    function play(){
+
+        cardEl.textContent = "Cards: " + card1 +" , "+ card2;
+        sumEL.textContent = "sum: " + sum;
+
+
+     if(sum < 21){
+        message = "Shit! Your match is drawn !"
+     }
+
+     else if( sum === 21){
+         message = "Wohoo!, You have won the match.."
+     }
+
+    else{
+        message = "Sorry! Better Luck Next Time"
+    }
+    
+    result.textContent = message; 
+   }
+
+    </script>
+
+
+</body>
+</html>
