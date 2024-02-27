@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+   span{
+    border-bottom: 2px solid black;
+    font-size: xx-large;
+   }
+        .container{
+            margin-left: 25%;
+            
+           
+
+        }
+        button{
+            margin-top: 10%;
+            width: 15%;
+            color: white;
+            background-color: green;
+            border-radius: 6%;
+        }
+
+        #sum{
+            margin-left: 12%;
+            font-size: x-large;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <span id="digit1"></span>
+        <span id="digit2"></span>
+ <br>
+        
+        <button onclick="add()" >+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mult()">x</button>
+        <button onclick="div()">/</button>
+         <br>
+         <br>
+         <div id="sum">Sum is: </div>
+ </div>
+    
+
+
+
+
+
+
+
+
+
+<!-- js======================== -->
+
+ <script>
+      
+      let num1 = 8;
+      let num2 = 2;
+      document.getElementById("digit1").textContent += num1;
+      document.getElementById("digit2").textContent += num2;
+
+      function add(){
+        let a = num1 + num2;
+        document.getElementById("sum").textContent += a;
+      }
+      
+      
+      function sub(){
+        let a = num1 - num2;
+
+        document.getElementById("sum").textContent += a;
+
+      }
+
+      
+      function mult(){
+        let  a = num1 * num2;
+        document.getElementById("sum").textContent += a;
+      }
+      
+      
+      function div(){
+        let a = num1 / num2;
+        document.getElementById("sum").textContent += a;
+      }
+      
+
+
+
+
+
+
+
+ </script>
+
+</body>
+</html>
+
