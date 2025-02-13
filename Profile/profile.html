@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../utility/styles.css">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <!-- Sidebar container -->
+    <div id="sidebar-container"></div>
+    <div class="main-content"></div>
+    <div class="container">
+        <div class="profile-header">
+            <img id="profilePhoto" src="https://via.placeholder.com/100" alt="Profile Photo">
+            <div class="profile-info">
+                <h2 id="fullName">Full Name</h2>
+                <h4 id="email">Email Address</h4>
+                <h4 id="mobileNumber">Mobile Number</h4>
+            </div>
+            <div class="photo-buttons">
+                <button id="uploadButton">Upload</button>
+                <button id="removePhoto" style="display: none;">Remove Photo</button>
+            </div>
+        </div>
+        <hr>
+        <form id="profileForm">
+            <!-- Form Fields -->
+            <label for="fullNameInput">Full Name:</label>
+            <input type="text" id="fullNameInput" placeholder="Enter your Full Name" required>
+
+            <label for="cnic">CNIC:</label>
+            <input type="text" id="cnic" placeholder="Enter your CNIC" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" placeholder="Enter your Mobile Number" required>
+
+            <label for="emailInput">Email Address:</label>
+            <input type="email" id="emailInput" placeholder="Enter your Email Address" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="maritalStatus">Marital Status:</label>
+            <select id="maritalStatus">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" placeholder="Enter your Religion" required>
+
+            <label for="disability">Do you have any Disability?</label>
+            <select id="disability">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+
+            <label for="currentAddress">Current Address:</label>
+            <input type="text" id="currentAddress" placeholder="Enter your Current Address" required>
+
+            <label for="permanentAddress">Permanent Address:</label>
+            <input type="text" id="permanentAddress" placeholder="Enter your Permanent Address" required>
+
+            <button type="button" id="saveButton">Save Changes</button>
+            <button type="button" id="editButton">Edit Information</button>
+        </form>
+        <input type="file" id="fileUpload" accept="image/png, image/jpeg" style="display: none;">
+        <div id="confirmationMessage" style="display:none;">Profile updated successfully!</div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../../utility/sidebar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 95%; /* Cover most of the screen width */
+  height: 90vh; /* Adjust the height to nearly the full screen */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow: auto; /* Ensures it scrolls if the content overflows */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: url('image.jpg') no-repeat center center; /* Add background image */
+  background-size: cover; /* Ensure the image covers the entire header */
+  background-color: #333; /* Fallback for when the image isn't loaded */
+  color: white; /* Make text visible on the dark background */
+  position: relative;
+  min-height: 150px; /* Ensure a consistent header height */
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.photo-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px; /* Space between form elements */
+}
+
+#confirmationMessage {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#sidebar-container:hover ~ .main-content {
+  margin-left: 250px;
+}
